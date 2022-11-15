@@ -13,30 +13,50 @@
 n = int(input())
 
 for _ in range(n):
-    test = list(input())
-    ans = []
-    cur = 0
-    for i in test[0:]:
-        print(test[0:])
-        print(i)
-        if i == "<":
-            # print(cur)
-            if cur != 0:
-                cur -= 1
-        elif i == ">":
-            if cur != len(test)-1:
-                cur += 1
-        elif i == "-":
-            if cur < 1:
-                test.pop(cur)
-            else:
-                test.pop(cur)
-                cur -= 1
-                test.pop(cur)
-        else:
-            # print(i)
-            # print("알파벳만 : "+ str(cur))
-            ans.append(test[cur])
-            cur+=1
+    test = input()
+    left = []
+    right = []
 
-    print(str(ans))
+    for i in test:
+        if i == "<":
+            if left:
+                right.append(left.pop())
+        elif i == ">":
+            if right:
+                left.append(right.pop())
+        elif i == "-":
+            if left:
+                left.pop()
+        else:
+            left.append(i)
+    print("".join(left)+"".join(reversed(right)))
+# n = int(input())
+
+# for _ in range(n):
+#     test = list(input())
+#     ans = []
+#     cur = 0
+#     for i in test[0:]:
+#         print(test[0:])
+#         print(i)
+#         if i == "<":
+#             # print(cur)
+#             if cur != 0:
+#                 cur -= 1
+#         elif i == ">":
+#             if cur != len(test)-1:
+#                 cur += 1
+#         elif i == "-":
+#             if cur < 1:
+#                 test.pop(cur)
+#             else:
+#                 test.pop(cur)
+#                 cur -= 1
+#                 test.pop(cur)
+#         else:
+#             # print(i)
+#             # print("알파벳만 : "+ str(cur))
+#             ans.append(test[cur])
+#             cur+=1
+#
+#     print(str(ans))

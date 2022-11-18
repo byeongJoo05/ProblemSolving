@@ -3,25 +3,22 @@
 자신보다 높은 탑은 push
 스택의 top을 이용해야함. top은 [-1]하면 나오지 않을까
 """
-
+import sys
+input = sys.stdin.readline
 n = int(input())
-tower = list(map(int,input().split()))
-stack = [(0,0)]
+tower = list(map(int, input().split()))
+stack = []
 ans = []
 for i in range(n):
-    while stack: #스택이 빌 때까지 연산
-        # 첫 값은 6, 0
-        tower_height, tower_idx = stack.pop()
-        print(tower_height)
-        print(tower[i])
-        if tower_height > tower[i]:
-            ans.append(tower_idx+1)
-            stack.append((tower, tower_idx))
-            break
+    while stack:
+        if tower[stack[-1][1]] < tower[i]:
+            stack.pop()
         else:
-            continue
+            ans.append(stack[-1][1]+1)
+            break
     else:
         ans.append(0)
-    stack.append((tower[i],i))
+    stack.append([tower[i],i])
 
-print(*ans)
+for i in ans:
+    print(i, end=" ")

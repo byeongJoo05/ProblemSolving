@@ -63,7 +63,7 @@ while q1:
         ny = y + dy[direction]
 
         if nx < 0 or nx >= r or ny < 0 or ny >= c:
-            print(dist1[x][y]) # 방문에서 1, 범위값 바깥이니 1 -> 합 2를 더 빼줘야함
+            print(dist1[x][y])
             exit(0)
 
         if dist1[nx][ny] != 0 or board[nx][ny] == "#":

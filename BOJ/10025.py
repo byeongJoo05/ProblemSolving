@@ -7,7 +7,8 @@ n = int(input())
 board= []
 dx = [0,0,1,-1]
 dy = [1,-1,0,0]
-
+"""
+"""
 for _ in range(n):
     board.append(list(input()))
 

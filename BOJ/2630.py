@@ -1,3 +1,6 @@
+import sys
+sys.setrecursionlimit(100000)
+
 n = int(input())
 board = []
 white_paper = 0 # 하얀 종이

@@ -18,9 +18,9 @@ def solution(n, costs):
 
     heap = []
     # 한 정점을 기준으로 하여 최소 신장트리 체크 하기.
-    check[0] = True  # 정점 0으로부터 시작
+    check[1] = True  # 정점 1으로부터 시작
 
-    for nxt in arr[0]:
+    for nxt in arr[1]:
         heapq.heappush(heap, (nxt[0], 1, nxt[1]))  # 정점 0으로부터의 연결된 정점들과 가중치를 우선순위 큐에 삽입하기
 
     while cnt < n - 1:  # 간선의 개수가 모든 정점들의 합-1 때 까지.

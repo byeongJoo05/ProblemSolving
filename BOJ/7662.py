@@ -15,7 +15,6 @@ for _ in range(n):
     chk = [False for _ in range(m)]
     for i in range(m):
         oper, num = input().split()
-        print(chk)
         if oper == "I":
             heapq.heappush(minheap, (int(num), i))
             heapq.heappush(maxheap,(int(num)*-1, i))

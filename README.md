@@ -9,3 +9,4 @@
 
 [SW 아카데미 최대 상금](https://swexpertacademy.com/main/code/problem/problemDetail.do?problemLevel=2&problemLevel=3&problemLevel=4&contestProbId=AV15Khn6AN0CFAYD&categoryId=AV15Khn6AN0CFAYD&categoryType=CODE&problemTitle=&orderBy=RECOMMEND_COUNT&selectCodeLang=ALL&select-1=4&pageSize=10&pageIndex=1)
 
+[백준 7662번 이중 우선순위 큐](https://www.acmicpc.net/problem/7662)

@@ -1,18 +1,39 @@
-## Getting Started
+## 입출력
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+### BufferedReader
+```java
+BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+int n = Integer.parseInt(br.readLine());
+```
+`BufferedReader`의 `readLine`은 `String`이 기본타입이기에 조건에 맞는 타입으로 형변환을 해주어야 사용이 가능하다.
 
-## Folder Structure
+### StringTokenizer
+```java
+StringTokenizer st = new StringTokenizer(br.readLine());
+String mod = st.nextToken();
+```
+입력 방식이 `3 3`과 같이 2개 이상의 값을 넣을 때는 `Tokenizer`를 사용한다.  
+> 다만 BFS 보드 삽입처럼 갯수가 많아질 때는 사용하지 않는게 좋겠다.  
 
-The workspace contains two folders by default, where:
+### StringBuilder
+```java
+StringBuilder sb = new StringBuilder();
+sb.append("a");
+sb.append("b").append(" ");
+sb.append("c").append("\n");
+System.out.println(sb); // ab c
+```
+자주 사용되는 Java 출력이라고 한다.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Stack
+```java
+Stack<Integer> stack = new Stack<>();
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+stack.push(1); // 1 추가
+stack.pop(); // top 삭제
+stack.clear(); // stack 초기화
+stack.size(); // 스택 크기 반환
+stack.empty(); // isEmpty()랑 뭐가 다르지
+stack.cotains(1); // 1이 포함되어 있으면 true, 없으면 false
+stack.peek() // top 출력 (제거X), 비어있으면 null 반환
+```

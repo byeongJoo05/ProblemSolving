@@ -1,5 +1,13 @@
-## 입출력
+# 자바 코딩테스트 준비
+## Package
+```java
+import java.util.*;
+import java.io.*;
+```
+두 패키지를 모두 import해서 사용하면 조금 더 수월하게 사용이 가능하다.  
+다만 기업마다 import 선언문을 확실시하는 곳도 했던 것 같으므로 어느정도는 알아두는 것이 편하다.
 
+## 입출력
 ### BufferedReader
 ```java
 BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

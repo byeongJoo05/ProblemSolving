@@ -45,3 +45,15 @@ stack.empty(); // isEmpty()랑 뭐가 다르지
 stack.cotains(1); // 1이 포함되어 있으면 true, 없으면 false
 stack.peek() // top 출력 (제거X), 비어있으면 null 반환
 ```
+
+## Queue
+```java
+Queue<Integer> queue = new LinkedList<>();
+
+queue.add(1); // 값 추가 - Queue가 꽉 차있다면 exception 발생.
+queue.offer(2); // 값 추가 - Queue가 꽉 차있다면 return 값은 false임.
+queue.poll(); // 첫 번째 값 반환 (제거됨), 비어있다면 null 반환
+queue.remove(); // 첫 번째 값 삭제
+queue.clear(); // Queue Clear
+queue.peek(); // 첫 번째 값 반환 (제거X)
+```
